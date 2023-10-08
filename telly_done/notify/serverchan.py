@@ -1,4 +1,4 @@
-from .base import NotifierBase, MessageFormatError, ConfigError, NotifyFailed
+from .base import NotifierBase, MessageFormatError, ConfigFormatError, NotifyFailed
 from typing import Dict
 import traceback
 import requests
@@ -11,7 +11,7 @@ class ServerchanNotifier(NotifierBase):
     def __init__(self, config: dict):
         self.config = config
         if self.config.get("sendkey") is None:
-            raise ConfigError("sendkey is required", config)
+            raise ConfigFormatError("sendkey is required", config)
         self.url = format_string.format(sendkey=self.config["sendkey"])
 
     def do_notify(self, message: Dict):

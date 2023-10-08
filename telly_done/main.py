@@ -4,7 +4,6 @@ from typing import List
 import click
 
 
-@tui(command="interactive", help="TellyDone TUI")
 @click.group()
 def cli():
     pass
@@ -21,7 +20,9 @@ def execute(silent: bool, args: List[str]):
 
 @cli.command(help="Configure TellyDone")
 def config():
-    pass
+    from .config.ui import spawn_ui
+
+    spawn_ui()
 
 
 @cli.command(help="Tell TellyDone's configuration")
