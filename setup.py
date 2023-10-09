@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-required_packages = ["click", "trogon", "textual"]
+required_packages = ["click", "trogon", "apprise"]
 
 setup(
     name="TellyDone",
