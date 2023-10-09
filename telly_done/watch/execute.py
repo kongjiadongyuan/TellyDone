@@ -14,12 +14,14 @@ def execute(config: Dict, args: List[str]):
 
     command = " ".join(args)
     start_time = time.time()
-    return_value = os.system(command=command)
+    return_value = os.system(command=command, shell=True)
     end_time = time.time()
+
+    used_time = end_time - start_time
 
     title = "Execution FAIL" if return_value else "Execution SUCCEED"
     content = f"""Command: {command}
-    Execution time: {end_time - start_time} seconds
+    Execution time: {used_time: .2f} seconds
     Return Value: {return_value}"""
 
     apobj.notify(body=content, title=title)
