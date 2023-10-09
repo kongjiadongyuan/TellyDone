@@ -29,3 +29,4 @@ Apprise_url must conform to apprise's format
 
 - [ ] Interactively create configuration files
 - [ ] Notify when specific `process` ends
+- [ ] `Peek` stdout/stderr after execution
