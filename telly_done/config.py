@@ -13,7 +13,7 @@ def home_dir():
 
 
 default_config_file_list = []
-default_config_file_list.append(os.path.join(home_dir() + ".telly_done"))
+default_config_file_list.append(os.path.join(home_dir(), ".telly_done"))
 default_config_file_list.append("/etc/telly_done")
 
 
