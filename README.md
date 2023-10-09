@@ -20,6 +20,9 @@ Configuration files are read according to the following priorities
 ```yaml
 apprise_url:
     - schan://xxxxxxxx/
+watch:
+    continuous: False
+    interval: 1800
 ```
 
 Apprise_url must conform to apprise's format
@@ -28,5 +31,5 @@ Apprise_url must conform to apprise's format
 ## Future Work
 
 - [ ] Interactively create configuration files
-- [ ] Notify when specific `process` ends
+- [x] Notify when specific `process` ends
 - [ ] `Peek` stdout/stderr after execution
