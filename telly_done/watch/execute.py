@@ -14,7 +14,7 @@ def execute(config: Dict, args: List[str]):
 
     command = " ".join(args)
     start_time = time.time()
-    return_value = os.system(command=command, shell=True)
+    return_value = os.system(command=command)
     end_time = time.time()
 
     used_time = end_time - start_time
